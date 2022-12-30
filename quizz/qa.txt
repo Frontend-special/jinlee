@@ -1,0 +1,24 @@
+
+1. output 연상
+이미지를 누르면 비디오 영상 재생된다.
+
+2. input 연상
+(1) 처음 화면에 보여줄 이미지를 담아줄 div 태그
+(2) 이미지 클릭시 진행됭 video 태그
+(3) video를 실행시키는 function
+
+3. input을 토대로 기술 검증
+(1) 이미지를 클릭하면 이미지 태그가 display none이 된다.
+// javascript 요소 display none
+
+(2) 이미지를 클릭하면 이미지와 겹쳐있던 vidoe 태그가 실행된다.
+// javascript video 실행
+
+4. 조건
+(1) 이미지 태그와 video 태그를 겹치는 것
+    position: absolute
+    z-index
+
+(2) 이미지 클릭 함수 
+    가. 이미지 클릭시 이미지 displaynone
+    나. video 실행
