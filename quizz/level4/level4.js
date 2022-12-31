@@ -12,4 +12,8 @@ let totalPage = 80;
 let currentPageIndx = 0;
 let currentPage = new URLSearchParams(location.search).get('page') || 1;
 
+페이지 갯수 나눠서 10개씩 나타나게
+클릭하면 페이지 계속 이동해야하고
+새로고침해도 마지막 접속한 페이지가 나와야함
+css어디에 적용해야하는지 확인할 것
 */
