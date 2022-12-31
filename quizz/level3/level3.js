@@ -5,4 +5,32 @@
 2. 요구사항 바탕으로 인풋 생각하기
 3. 인풋 바탕으로 단계별 한글로 함수 설계하기
 4. 단계별 구글링 키워드 생각하기
+
+
+1. 재료명과 무게 입력 후 추가 버튼 클릭하면 아래 테이블에 삭제 버튼과 함께 추가. 
+   단, 중복된 재료있다면 에러메시지
+   제출 버튼을 클릭하면 아래에 테이블 내용 리스트로 추가
+2. 값 입력 = >$ingredient, $weight, 
+   추가 버튼 in form id ingredient-form
+   추가 버튼 클릭 시 입력될 테이블
+   제출 버튼 submit_button
+   제출 버튼 클릭 시 입력될 리스트 ingredient-list
+
+3. 함수 1 addIngredient
+   함수 실행시킬 곳 : #ingredient-form button.onclick
+   $ingredeint가 table 재료 열에 있는 재료라면 에러메시지 반환
+   - if table 재료열 전체행 for문으로 체크
+   $ingredient, $weight, button table에 tr로 추가
+   - createElement tr, append 3개 한 줄로
+
+   함수 2 addList
+   함수 실행시킬 곳 : #submit_button.onclick
+   table의 tr 재료, 무게 #ingredient-list에 li로 추가
+   - createElement li, append tr 전체 tr 추가해야하므로 for문으로 tr행 갯수만큼
+
+4. 함수 1
+   table의 특정 열의 전체 행 가져와서 1:1 비교하는 방법
+   tr 생성 후 추가하는 방법
+   함수 2
+   table의 행 데이터 가져오는 방법
 */
