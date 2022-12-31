@@ -9,6 +9,11 @@ ex) 길이기 80인 배열은 길이가 5로 분해한다면 16개의 배열을 
 3. 인풋 바탕으로 단계별 한글로 함수 설계하기
 4. 단계별 구글링 키워드 생각하기
 
+1. 배열을 원하는 갯수의 길이로 나눈 후 배열로 반환
+2. 나눠질 배열, 나눌 원소갯수
+3. function input = arr, num output = dividedArr
+   dividedArr = arr/num & rest
+4. 원하는 갯수만큼 배열을 쪼개는 배열메소드. 배열 반환하는 방법
 */
 
 function division() {}
