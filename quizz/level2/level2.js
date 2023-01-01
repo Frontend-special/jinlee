@@ -1,5 +1,5 @@
 import { RESERVATION_LIST } from './reservation .js';
-console.log(RESERVATION_LIST);
+// console.log(RESERVATION_LIST);
 
 /* 
 예약 고객확인하기
@@ -29,4 +29,28 @@ console.log(RESERVATION_LIST);
 2. 전화번호가 없을 떄 '없는 번호 입니다'
 3. 이름과 전화번호가 일치하지 않을 때 '예약자명과 번호가 일치하지 않습니다'
 
+4. input name dom api 가져오기
 */
+
+// const $userName = document.getElementsByName("user-name") //return nodelist whats it? and whats difference with querySelector?
+const $userName2 = document.querySelector("[name='user-name']") //equivalent with form>p
+// const $userName3 = document.querySelector("form>p:first-child>input") // form p:first or form>p:first what's distinction in between?
+const $phoneNo = document.querySelector("[name='user-phone']")
+const $resultList = document.querySelector("#reservation-number")
+const $chkBtn = document.querySelector("form >button")
+
+$chkBtn.addEventListener('click',resevationChk)
+
+function resevationChk(e) { //why put e here?
+    e.preventDefault(); //any other case not using this one?
+    
+    
+
+    const result = $userName2.value + $phoneNo.value
+    
+    $resultList.innerHTML = result;
+}
+
+const errChk() {
+
+}
