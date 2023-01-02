@@ -19,7 +19,7 @@
 3. 함수 1 addIngredient
    함수 실행시킬 곳 : #ingredient-form button.onclick
    $ingredeint가 table 재료 열에 있는 재료라면 에러메시지 반환
-   - if table 재료열 전체행 for문으로 체크
+   - if table 재료열 전체행 foreach? 자신의 내부에서 반복문을 실행 배열을 순회하면서 해야할 일을 콜백함수로 전달받아 반복호출
    $ingredient, $weight, button table에 tr로 추가
    - createElement tr, append 3개 한 줄로
 
@@ -34,3 +34,30 @@
    함수 2
    table의 행 데이터 가져오는 방법
 */
+
+
+const $ingredient = document.querySelector('[name="ingredient"]')
+const $weight = document.querySelector('[name="weight"]')
+const $addBtn = document.querySelector('form button')
+const $table = document.querySelector("table")
+const $list = document.querySelector("#ingredient-list")
+
+console.log($table, $list)
+
+$addBtn.onclick = function(e) {
+  e.preventDefault();
+  let row = document.createElement("tr");
+  let cell1 = document.createElement("td");
+  let cell2 = document.createElement("td");
+  let cell3 = document.createElement("td");
+
+  
+   cell1.innerHTML = $ingredient.value
+   cell2.innerHTML = $weight.value
+   cell3.innerHTML = "<button>Delete</button>"
+   row.appendChild(cell1)
+   row.appendChild(cell2)
+   row.appendChild(cell3)
+   $table.append(row)
+   
+};
