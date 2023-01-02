@@ -65,3 +65,18 @@ function prevPageGroup() {
 
 $nextPage.addEventListener('click', nextPageGroup);
 $prevPage.addEventListener('click', prevPageGroup);
+
+
+/*
+let PAGE_LST : 화살표 사이에 들어갈 페이지 배열?
+*/
+
+/*
+배열에 프로토타입 메소드 생성? division
+메소드 사용될 배열의 길이만큼, 나누고 싶은 페이지 수를 인자로 받아서 배열로 재반환
+
+*/
+
+/*
+math, ceil?
+*/
