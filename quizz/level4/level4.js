@@ -17,3 +17,7 @@ let currentPage = new URLSearchParams(location.search).get('page') || 1;
 새로고침해도 마지막 접속한 페이지가 나와야함
 css어디에 적용해야하는지 확인할 것
 */
+
+let totalPage = 80;
+let currentPageIndx = 0;
+

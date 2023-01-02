@@ -42,8 +42,6 @@ const $addBtn = document.querySelector('form button')
 const $table = document.querySelector("table")
 const $list = document.querySelector("#ingredient-list")
 
-console.log($table, $list)
-
 $addBtn.onclick = function(e) {
   e.preventDefault();
   let row = document.createElement("tr");
@@ -61,3 +59,5 @@ $addBtn.onclick = function(e) {
    $table.append(row)
    
 };
+
+const $delBtn = document.querySelector("table tr:")
