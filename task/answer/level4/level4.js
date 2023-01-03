@@ -9,8 +9,8 @@ const $prevPage = document.querySelector('.btn_nav.pre');
 let totalPage = 80;
 let PAGE_LST = [];
 let currentPageIndx = 0;
-let currentPage = new URLSearchParams(location.search).get('page') || 1;
-
+let currentPage = new URLSearchParams(location.search).get('page') || 1; //|| 1 존재이유
+console.log(currentPage)
 Array.prototype.division = function (div) {
   const arr = this;
   const result = [];
@@ -71,12 +71,26 @@ $prevPage.addEventListener('click', prevPageGroup);
 let PAGE_LST : 화살표 사이에 들어갈 페이지 배열?
 */
 
-/*
+/* Array.prototype.division
 배열에 프로토타입 메소드 생성? division
-메소드 사용될 배열의 길이만큼, 나누고 싶은 페이지 수를 인자로 받아서 배열로 재반환
+메소드사용하는 array this로 받아 함수 내에서 재정의
+나눠진 배열이 들어갈 result 배열
+선택한 배열의 길이만큰 상수에 반영
+0~배열 길이만큼, 지정해준 크기만큼 증가하면서 포문 실행
+slice통해 만들어진 rssult 배열에 추가 하고 result리턴
+*/
+
+/* pagaNation(totalPage, currentPage)
+즉시실행함수
+input : totalPage, currentPage (페이지 전체 갯수, url주소 상 page의 값 = 현재 페이지 위치?)
+빈 배열 생성, 한 페이지에 표시될 페이지 갯수 리밋은 10
+총페이지수 = math.ceil(전체페이지수/한화면에서 보여줄 크기) => math.ceil 올림 80/10 = 8 총 8페이지
+
+for 1~totalpage(80)RKwl 1씩 증가하면서 paageNation_list에 푸쉬
+
 
 */
 
-/*
-math, ceil?
-*/
+
+
+//구글 검색 javascript 전체페이지 묶음으로 나누기 https://lts0606.tistory.com/477
