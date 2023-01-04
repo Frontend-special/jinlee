@@ -55,7 +55,14 @@ const $submitBtn = document.querySelector("#submit_button")
    
    };
 
-   $submitBtn.onclick = function () {
-      // e.preventDefault(); 여기필요없는이유?
-      console.log('test')
+   $submitBtn.onclick = function (){
+   
+         for (let i=1; i<$table.rows.length; i++) {
+
+            let objCells = $table.rows.item(i).cells
+
+            const li = document.createElement('li')
+            li.innerHTML=`재료 : ${objCells[0].innerText} 무게 : ${objCells[1].innerHTML}`
+            $list.append(li)
+         }
    };
