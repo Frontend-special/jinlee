@@ -30,7 +30,7 @@
 
 4. 함수 1
    table의 특정 열의 전체 행 가져와서 1:1 비교하는 방법
-   tr 생성 후 추가하는 방법
+   tr 생성 후 추가하는 방법 => innerHTML 
    함수 2
    table의 행 데이터 가져오는 방법
 */
@@ -41,23 +41,21 @@ const $weight = document.querySelector('[name="weight"]')
 const $addBtn = document.querySelector('form button')
 const $table = document.querySelector("table")
 const $list = document.querySelector("#ingredient-list")
+const $submitBtn = document.querySelector("#submit_button")
 
-$addBtn.onclick = function(e) {
-  e.preventDefault();
-  let row = document.createElement("tr");
-  let cell1 = document.createElement("td");
-  let cell2 = document.createElement("td");
-  let cell3 = document.createElement("td");
-
-  
-   cell1.innerHTML = $ingredient.value
-   cell2.innerHTML = $weight.value
-   cell3.innerHTML = "<button>Delete</button>"
-   row.appendChild(cell1)
-   row.appendChild(cell2)
-   row.appendChild(cell3)
-   $table.append(row)
+   $addBtn.onclick = function(e) {
+      e.preventDefault();
+      
+      let row = document.createElement("tr");
+      
+      row.innerHTML = `<td>${$ingredient.value}</td>
+      <td>${$weight.value}</td>
+      <td><button>Delete</button></td>`
+      $table.append(row)
    
-};
+   };
 
-const $delBtn = document.querySelector("table tr:")
+   $submitBtn.onclick = function () {
+      // e.preventDefault(); 여기필요없는이유?
+      console.log('test')
+   };
