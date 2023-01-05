@@ -46,23 +46,25 @@ const $submitBtn = document.querySelector("#submit_button")
    $addBtn.onclick = function(e) {
       e.preventDefault();
       
-      let row = document.createElement("tr");
       
+      let row = document.createElement("tr");
       row.innerHTML = `<td>${$ingredient.value}</td>
       <td>${$weight.value}</td>
-      <td><button>Delete</button></td>`
-      $table.append(row)
-   
+      <td><button>Delete</button></td>`;
+      $table.append(row);
+      
+      $ingredient.value='';
+      $weight.value='';
    };
 
    $submitBtn.onclick = function (){
-   
+         $list.innerHTML='';
          for (let i=1; i<$table.rows.length; i++) {
 
-            let objCells = $table.rows.item(i).cells
+            let objCells = $table.rows.item(i).cells;
 
-            const li = document.createElement('li')
-            li.innerHTML=`재료 : ${objCells[0].innerText} 무게 : ${objCells[1].innerHTML}`
-            $list.append(li)
+            const li = document.createElement('li');
+            li.innerHTML=`재료 : ${objCells[0].innerText} 무게 : ${objCells[1].innerHTML}`;
+            $list.append(li);
          }
    };
