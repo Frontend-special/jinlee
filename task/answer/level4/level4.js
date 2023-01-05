@@ -99,12 +99,20 @@ cpage=73, p_limit=10, cpage/p_limit = 7.3 => roundup = 8 but -1 =7
 -----------------------------현재 페이지가 속해야할 구간으르 구한다
  
 for 1~totalpage(80)까지 1씩 증가하면서 paageNation_list에 푸쉬
-limit수만큼 배열을 묶음 -> 배열? 객체?
+limit수만큼 프로토타입 division 메소드 이용 배열을 묶음 -> 배열? 객체?
 renderpagenation 실행
 */
 
 //구글 검색 javascript 전체페이지 묶음으로 나누기 https://lts0606.tistory.com/477
 
-/*
+/* renderPageNation
+currentPageIndex통해서 구간 반환 후 가로리스트에 넣는데...
+구간에 있는 페이지마다 map으로 돌면서...
+1page면 1페이지로 a태그, ''join
+
+리스트안 숫자하나씩 돌면서 현재페이지면 on클래스 추가
+
+넥스트 버튼 누르면 발생할 이벤트
+현재페이지 인덱스 ++ 렌더 실행
 
 */

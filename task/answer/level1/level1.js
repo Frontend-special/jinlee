@@ -36,6 +36,7 @@ push메소드 이용 신규 배열에 자른 값 저장
 
 
 google keyword
-자바스크립트 배열 원하는 크기로 나누기 (https://gurtn.tistory.com/174)
+자바스크립트 배열 원하는 크기로 나누기 
+(https://gurtn.tistory.com/174)
 
 */
