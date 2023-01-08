@@ -31,6 +31,14 @@ import { RESERVATION_LIST } from './reservation .js';
 
 4. input name dom api 가져오기, 객체가 있는 배열에서 특정값 찾기
 */
+/*
+구글링 키워드
+1. input box에 숫자만 입력가능한 정규표현식 (https://hianna.tistory.com/413)
+2. input box 입력 시 핸드폰 번호로 자동 변환 (https://im-first-rate.tistory.com/138)
+3. 배열 안의 프로퍼티값이 일치하는 객체 찾기 (https://hianna.tistory.com/406)
+4. 프로퍼티 값이 일치하는 객체의 다른 프로퍼티 접근방법
+*/
+
 
 // const $userName = document.getElementsByName("user-name") //nodelist로 반환? 쿼리셀렉터와 무슨차이?
 const $userName2 = document.querySelector("[name='user-name']") //3번과 같은 결과값 반환, 사용목적?

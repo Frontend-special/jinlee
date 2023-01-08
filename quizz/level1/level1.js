@@ -19,16 +19,20 @@ ex) 길이기 80인 배열은 길이가 5로 분해한다면 16개의 배열을
 3. function input = arr, num output = dividedArr
    dividedArr = arr/num & rest
 4. 원하는 갯수만큼 배열을 쪼개는 배열메소드. 배열 반환하는 방법
+
+자바스크립트 배열 원하는 크기로 나누기 
+(https://gurtn.tistory.com/174)
 */
 
 let arr = [1,2,3,4,5,6,7,8,9,10,11]
 function division(arr, size) {
-   const res = [];
-   for (let i = 0; i< arr.length; i += size) {
-      const chunk = arr.slice(i, i+size);
-      res.push(chunk);
-   }
-   return console.log(res);
+ const res = [];
+
+ for(i=0; i<arr.length; i+=size){
+   res.push(arr.splice(i,i+size));
+   
+ }
+console.log(res);
 }
 
 division(arr, 5);
