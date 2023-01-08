@@ -2,7 +2,12 @@ export const RESERVATION_LIST = [
   {
     name: '김성용',
     phone: '010-1234-1234',
-    number: '1234-1234-1234',
+    number: '1111-1234-1234',
+  },
+  {
+    name: '김성용',
+    phone: '010-1234-1234',
+    number: '2222-1234-1234',
   },
   {
     name: '이효진',

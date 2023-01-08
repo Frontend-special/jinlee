@@ -50,7 +50,7 @@ const $list = document.querySelector("#ingredient-list")
 const $submitBtn = document.querySelector("#submit_button")
 
    $addBtn.onclick = function(e) {
-      e.preventDefault();
+      e.preventDefault(e);
       
       
       let row = document.createElement("tr");

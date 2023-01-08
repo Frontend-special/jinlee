@@ -60,15 +60,16 @@ function resevationChk(e) { //e 들어가는이유?
         const resPhone = RESERVATION_LIST.filter(function(el){
             return el.phone === $phoneNo.value;
         });
+
         const result = RESERVATION_LIST.filter(function(el){
             return el.name === $userName2.value && el.phone===$phoneNo.value 
         });
-
+        // console.log(result);
         if(resName == "") return $resultList.innerHTML = errChk[101]
         if(resPhone == "") return $resultList.innerHTML = errChk[102]
         if(result=="") return $resultList.innerHTML = errChk[103]
-        $resultList.innerHTML = result[0].number;
         
+     
 }
 
 const errChk = {
